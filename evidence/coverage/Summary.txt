@@ -1,0 +1,38 @@
+Summary
+  Generated on: 18/11/2026 - 5:56:07 pm
+  Coverage date: 18/11/2026 - 5:38:47 pm - 18/11/2026 - 5:56:02 pm
+  Parser: MultiReport (2x Cobertura)
+  Assemblies: 1
+  Classes: 16
+  Files: 16
+  Line coverage: 96.9%
+  Covered lines: 569
+  Uncovered lines: 18
+  Coverable lines: 587
+  Total lines: 859
+  Branch coverage: 90.2% (232 of 257)
+  Covered branches: 232
+  Total branches: 257
+  Method coverage: 98.9% (90 of 91)
+  Full method coverage: 96.7% (88 of 91)
+  Covered methods: 90
+  Fully covered methods: 88
+  Total methods: 91
+
+TempMonitor.App                                96.9%
+  Program                                         0%
+  TempMonitor.App.Models.SensorConfig           100%
+  TempMonitor.App.Models.SensorReading          100%
+  TempMonitor.App.Services.AnomalyDetector      100%
+  TempMonitor.App.Services.ConfigStore          100%
+  TempMonitor.App.Services.ConfigValidator      100%
+  TempMonitor.App.Services.FileLogger           100%
+  TempMonitor.App.Services.MenuRunner          99.4%
+  TempMonitor.App.Services.ReadingLogger        100%
+  TempMonitor.App.Services.ReadingRepository    100%
+  TempMonitor.App.Services.ReadingValidator     100%
+  TempMonitor.App.Services.Sensor               100%
+  TempMonitor.App.Services.SensorManager       97.9%
+  TempMonitor.App.Services.Smoother             100%
+  TempMonitor.App.Services.ThresholdChecker     100%
+  TempMonitor.App.Services.ValidationResult     100%
