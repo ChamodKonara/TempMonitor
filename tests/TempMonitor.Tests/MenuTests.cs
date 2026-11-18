@@ -171,6 +171,19 @@ public class MenuTests : IDisposable
     }
 
     [Fact]
+    public void Reset_AllSensors_ClearsEveryHistoryButKeepsStoredReadings()
+    {
+        _mgr.ProcessReading("S1", 22);
+        _mgr.ProcessReading("S2", 24);
+
+        Assert.Contains("Reset 3 sensor(s)", Run("8\n0\n0\n"));
+
+        Assert.Empty(_mgr.GetHistory("S1"));
+        Assert.Empty(_mgr.GetHistory("S2"));
+        Assert.Equal(2, _repo.RetrieveData().Count);
+    }
+
+    [Fact]
     public void Delete_Cancelled_KeepsSensor()
     {
         Assert.Contains("cancelled", Run("9\n1\nn\n0\n"));
@@ -223,5 +236,18 @@ public class MenuTests : IDisposable
         var output = Run("6\n1\n0\n");
         Assert.Contains("Average 23.0C", output);
         Assert.Contains("Smoothed (latest 5): 23.0C", output);
+    }
+
+    [Fact]
+    public void Analyse_AllSensors_ShowsEachSensor()
+    {
+        _mgr.ProcessReading("S1", 22);
+        _mgr.ProcessReading("S2", 24);
+
+        var output = Run("6\n0\n0\n");
+
+        Assert.Contains("--- S1 ---", output);
+        Assert.Contains("--- S2 ---", output);
+        Assert.Contains("No readings for S3 yet.", output);
     }
 }

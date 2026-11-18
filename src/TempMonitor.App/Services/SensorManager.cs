@@ -203,6 +203,9 @@ public class SensorManager
         return true;
     }
 
+    // Reset every registered sensor. Returns how many were reset.
+    public int ResetAllSensors() => SensorIds.Count(ResetSensor);
+
     // 15. DeleteSensor: stop and unregister, keep stored readings
     public bool DeleteSensor(string id)
     {
