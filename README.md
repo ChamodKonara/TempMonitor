@@ -188,7 +188,7 @@ Tests use temporary databases and folders, so they never touch real data.
 
 ### Code coverage
 
-Line coverage: **XX.X%** (requirement: at least 70%). Branch coverage: **XX.X%**.
+Line coverage: **96.6%** (requirement: at least 70%). Branch coverage: **90.8%**.
 
 ```bat
 dotnet test --collect:"XPlat Code Coverage" --results-directory TestResults
@@ -207,7 +207,7 @@ tests with coverage collection.
 ## 7. Development process
 
 - **Branching:** `main` for stable code, `develop` for integration, and one `feature/*` branch per task, merged into `develop` by pull request after CI passes.
-- **Kanban board:** [GitHub Projects board](BOARD_LINK_HERE) with To do, In progress, Testing/Review and Done columns. Every task is a GitHub issue with acceptance criteria, closed by the pull request that completes it.
+- **Kanban board:** [GitHub Projects board](https://github.com/users/ChamodKonara/projects/3) with To do, In progress, Testing/Review and Done columns. Every task is a GitHub issue with acceptance criteria, closed by the pull request that completes it.
 - **Release:** the finished application is tagged `v1.0`.
 
 ## 8. Known limitations
