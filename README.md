@@ -188,7 +188,7 @@ Tests use temporary databases and folders, so they never touch real data.
 
 ### Code coverage
 
-Line coverage: **96.6%** (requirement: at least 70%). Branch coverage: **90.8%**.
+Line coverage: **96.9%** (requirement: at least 70%). Branch coverage: **90.2%**.
 
 ```bat
 dotnet test --collect:"XPlat Code Coverage" --results-directory TestResults
